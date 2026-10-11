@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BLACK RED BARBER | Barbería</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #101010;
+    color: white;
+}
+
+header {
+    background: #080808;
+    padding: 22px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #e32636;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #e32636;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #e32636;
+}
+
+.hero {
+    min-height: 580px;
+    display: flex;
+    align-items: center;
+    padding: 70px 8%;
+    background:
+    linear-gradient(90deg, rgba(0,0,0,.95), rgba(0,0,0,.35)),
+    url("https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1800&q=85")
+    center/cover;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.tag {
+    color: #e32636;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+h1 {
+    font-size: clamp(42px, 7vw, 75px);
+    margin: 20px 0;
+    line-height: 1.05;
+}
+
+h1 span {
+    color: #e32636;
+}
+
+.hero p {
+    color: #ddd;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.button {
+    display: inline-block;
+    background: #e32636;
+    color: white;
+    text-decoration: none;
+    padding: 15px 25px;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: .2s;
+}
+
+.button:hover {
+    background: #b71827;
+    transform: translateY(-2px);
+}
+
+section {
+    padding: 80px 8%;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.section-title span {
+    color: #e32636;
+}
+
+.subtitle {
+    color: #aaa;
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 22px;
+}
+
+.card {
+    background: #1b1b1b;
+    padding: 30px;
+    border-bottom: 3px solid #e32636;
+    transition: .2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    margin-bottom: 15px;
+    font-size: 21px;
+}
+
+.card p {
+    color: #bbb;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.price {
+    font-size: 27px;
+    color: #e32636;
+    font-weight: bold;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 18px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 4px;
+    transition: .3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.02);
+}
+
+.about {
+    background: #191919;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    align-items: center;
+    gap: 40px;
+}
+
+.about img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.about p {
+    color: #ccc;
+    line-height: 1.9;
+    margin: 20px 0;
+}
+
+.contact {
+    text-align: center;
+}
+
+.contact-box {
+    max-width: 650px;
+    margin: auto;
+    background: #1b1b1b;
+    padding: 35px;
+    border-radius: 5px;
+}
+
+.contact-box p {
+    color: #ccc;
+    line-height: 2;
+    margin-bottom: 25px;
+}
+
+footer {
+    text-align: center;
+    background: #070707;
+    padding: 25px;
+    color: #999;
+    border-top: 2px solid #e32636;
+}
+
+@media (max-width: 600px) {
+    header {
+        justify-content: center;
+        text-align: center;
+    }
+
+    nav a {
+        margin: 0 7px;
+    }
+
+    .hero {
+        min-height: 500px;
+        padding: 55px 7%;
+    }
+
+    section {
+        padding: 60px 7%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">BLACK <span>RED</span> BARBER</div>
+
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+</header>
+
+<main>
+    <section class="hero" id="inicio">
+        <div class="hero-content">
+            <div class="tag">ESTILO · PRECISIÓN · PERSONALIDAD</div>
+            <h1>Tu estilo.<br>Nuestras <span>tijeras.</span></h1>
+            <p>
+                Mucho más que un corte de pelo. Descubre una barbería
+                moderna donde cada detalle cuenta y tu estilo es lo primero.
+            </p>
+            <a class="button" href="#contacto">RESERVA TU CITA</a>
+        </div>
+    </section>
+
+    <section id="servicios">
+        <h2 class="section-title">NUESTROS <span>SERVICIOS</span></h2>
+        <p class="subtitle">Encuentra el estilo que mejor va contigo.</p>
+
+        <div class="services">
+            <div class="card">
+                <h3>✂️ Corte clásico</h3>
+                <p>Un corte limpio y elegante, adaptado a tu estilo.</p>
+                <div class="price">12 €</div>
+            </div>
+
+            <div class="card">
+                <h3>🔥 Fade / Degradado</h3>
+                <p>Degradados modernos con acabados precisos.</p>
+                <div class="price">15 €</div>
+            </div>
+
+            <div class="card">
+                <h3>🧔 Arreglo de barba</h3>
+                <p>Perfilado y cuidado para un resultado impecable.</p>
+                <div class="price">8 €</div>
+            </div>
+
+            <div class="card">
+                <h3>💈 Corte + barba</h3>
+                <p>El combo perfecto para renovar tu imagen.</p>
+                <div class="price">20 €</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="nosotros">
+        <div>
+            <h2 class="section-title" style="text-align:left">
+                MÁS QUE UNA <span>BARBERÍA</span>
+            </h2>
+
+            <p>
+                Creamos un espacio donde la tradición se encuentra con
+                las últimas tendencias. Nos importa cada detalle:
+                el corte, el acabado y, sobre todo, que salgas satisfecho.
+            </p>
+
+            <p>
+                Ven a conocernos y encuentra tu próximo estilo.
+                Tu imagen merece lo mejor.
+            </p>
+
+            <a href="#contacto" class="button">VEN A CONOCERNOS</a>
+        </div>
+
+        <img
+            src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=900&q=85"
+            alt="Interior de una barbería"
+        >
+    </section>
+
+    <section>
+        <h2 class="section-title">NUESTRO <span>TRABAJO</span></h2>
+        <p class="subtitle">Inspiración para tu próximo corte.</p>
+
+        <div class="gallery">
+            <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=700&q=80" alt="Barbería moderna">
+            <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=700&q=80" alt="Trabajo de barbería">
+            <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=700&q=80" alt="Corte de pelo">
+        </div>
+    </section>
+
+    <section class="contact" id="contacto">
+        <h2 class="section-title">¿PREPARADO PARA TU <span>NUEVO ESTILO?</span></h2>
+        <p class="subtitle">Contacta con nosotros y reserva tu próxima cita.</p>
+
+        <div class="contact-box">
+            <p>
+                📍 Dirección: Tu dirección aquí<br>
+                📞 Teléfono: Tu teléfono aquí<br>
+                🕒 Horario: Lunes a sábado
+            </p>
+
+            <a
+                class="button"
+                href="https://wa.me/34000000000"
+                target="_blank"
+                rel="noopener noreferrer"
+            >RESERVAR POR WHATSAPP</a>
+        </div>
+    </section>
+</main>
+
+<footer>
+    © 2026 BLACK RED BARBER · Todos los derechos reservados
+</footer>
+
+</body>
+</html>
